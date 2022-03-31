@@ -6,26 +6,31 @@ namespace _31Mart
 {
     internal class Group
     {
-        private static int _no = 100;
+        private static int _noIntP = 100;
+        private static int _noIntD = 100;
+        private static int _noIntS = 100;
         private string _noLetterP = "P";
         private string _noLetterD = "D";
         private string _noLetterS = "S";
         public Group(GroupType type)
         {
-            _no++;
+            
             if (type == GroupType.Design)
             {
-                _noLetterD += _no;
+                _noIntD++;
+                _noLetterD += _noIntD;
                 this.No = _noLetterD;
             }
             else if (type == GroupType.Programming)
             {
-                _noLetterP += _no;
+                _noIntP++;
+                _noLetterP += _noIntP;
                 this.No = _noLetterP;
             }
             else if (type == GroupType.System)
             {
-                _noLetterS += _no;
+                _noIntS++;
+                _noLetterS += _noIntS;
                 this.No = _noLetterS;
             }
             this.Type = type;
